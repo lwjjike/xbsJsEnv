@@ -9,6 +9,13 @@
 
 ## 快速开始
 
+如需使用localStorage，请使用如下命令运行js文件：
+
+```bash
+# jd.db表示你要将生成的jd.db文件保存到本地路径哪儿
+node.exe --experimental-webstorage --localstorage-file jd.db 目标js文件目录
+```
+
 基础使用示例如下：
 
 ```javascript
