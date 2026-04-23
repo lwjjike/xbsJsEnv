@@ -84,6 +84,7 @@ node --inspect-brk app.js
     - [`xbs.setDOMMethod(className, methodName, fn)`](#xbssetdommethodclassname-methodname-fn)
     - [`xbs.createDocAll(document, callback)`](#xbscreatedocalldocument-callback)
     - [`xbs.setGlog(enable)`](#xbssetglogenable)
+  - [案例截图](#案例截图)
   - [说明](#说明)
 
 ## API 概览
@@ -924,6 +925,9 @@ xbs.setGlog(false);  // 关闭日志
 console.log("敏感操作");
 xbs.setGlog(true);   // 恢复日志
 ```
+
+## 案例截图
+![jd_h5st](doc/jd_h5st.png)
 
 ## 说明
 
