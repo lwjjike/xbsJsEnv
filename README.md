@@ -16,15 +16,15 @@
 #### 推荐方案一
 1. 下载nvm-windows：[https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
 2. 选择nvm并安装
-![nvm_install_github](doc/nvm_install_github.png)
-3. 找到nvm安装路径(如果nvm是安装在全局默认在 C:\Users\用户名\AppData\Roaming\nvm)路径下
+   ![nvm_install_github](doc/nvm_install_github.png)
+4. 找到nvm安装路径(如果nvm是安装在全局默认在 C:\Users\用户名\AppData\Roaming\nvm)路径下
 ![nvm_local_path](doc/nvm_local_path.png)
-4. 在nvm目录中新建一个目录名字取为v25.8.2 
-5. 将下载好的7z文件进行解压，并将文件放到v25.8.2目录中
-6. 重新打开终端使用nvm list查看是否有25.8.2版本
+5. 在nvm目录中新建一个目录名字取为v25.8.2 
+6. 将下载好的7z文件进行解压，并将文件放到v25.8.2目录中
+7. 重新打开终端使用nvm list查看是否有25.8.2版本
 ![cmd_nvm_list](doc/cmd_nvm_list.png)
-7. 切换到25.8.2版本(nvm use 25.8.2)
-8. 到此安装结束，可以开始使用了
+8. 切换到25.8.2版本(nvm use 25.8.2)
+9. 到此安装结束，可以开始使用了
    
 #### 方案二
 1. 下载7z文件并解压到指定的目录中，复制目录路径
