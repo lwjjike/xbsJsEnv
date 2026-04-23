@@ -8,24 +8,33 @@
 - **非 `xbs` 开头的 `.js` 文件**：仍保留 `module`、`require`、`__filename`、`__dirname` 等全局属性
 
 ## 快速开始
+### 注意
+1. 使用官方`jsdom`或`@lwjjike/xbsdom`接入，如果要用到canvas，需要额外安装canvas包(`npm i canvas`)
+2. 需要使用webgl的功能必须使用`@lwjjike/xbsdom`，并且保证项目路径中不能出现中文路径
+
+### 安装
+#### 推荐方案一
+1. 下载nvm-windows：[https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
+2. 选择nvm并安装
+![nvm_install_github](doc/nvm_install_github.png)
+3. 找到nvm安装路径(如果nvm是安装在全局默认在 C:\Users\用户名\AppData\Roaming\nvm)路径下
+![nvm_local_path](doc/nvm_local_path.png)
+4. 在nvm目录中新建一个目录名字取为v25.8.2 
+5. 将下载好的7z文件进行解压，并将文件放到v25.8.2目录中
+6. 重新打开终端使用nvm list查看是否有25.8.2版本
+![cmd_nvm_list](doc/cmd_nvm_list.png)
+7. 切换到25.8.2版本(nvm use 25.8.2)
+8. 到此安装结束，可以开始使用了
+   
+#### 方案二
+1. 下载7z文件并解压到指定的目录中，复制目录路径
+2. 使用`目录路径\node.exe 目标文件名.js`来运行js文件 或 使用 `目录路径\node.exe --inspect-brk 目标文件名.js`来调试js文件
 
 如需使用localStorage，请使用如下命令运行js文件：
 
 ```bash
 # jd.db表示你要将生成的jd.db文件保存到本地路径哪儿
 node.exe --experimental-webstorage --localstorage-file jd.db 目标js文件目录
-```
-
-基础使用示例如下：
-
-```javascript
-var { add } = xbs.require("./test.js");
-
-console.log(xbs.__filename, xbs.__dirname);
-
-xbs.module.exports = {
-    a: 1
-}
 ```
 
 直接运行即可。调试时可使用 `--inspect-brk` 参数：
@@ -38,6 +47,10 @@ node --inspect-brk app.js
 
 - [小博士补环境 Node 框架](#小博士补环境-node-框架)
   - [快速开始](#快速开始)
+    - [注意](#注意)
+    - [安装](#安装)
+      - [推荐方案一](#推荐方案一)
+      - [方案二](#方案二)
   - [目录](#目录)
   - [API 概览](#api-概览)
   - [1. 全局对象拦截器](#1-全局对象拦截器)
